@@ -3,9 +3,9 @@ import 'package:intl/intl.dart';
 import '../models/transaction.dart' as tx;
 
 class TransactionList extends StatelessWidget {
-  var peakcolor = Color.fromARGB(255, 61, 166, 170);
-  var darkcolor = Color.fromARGB(255, 48, 47, 46);
-  var lightdarkcolor = Color.fromARGB(255, 94, 95, 97);
+  var peakcolor = const Color.fromARGB(255, 61, 166, 170);
+  var darkcolor = const Color.fromARGB(255, 48, 47, 46);
+  var lightdarkcolor = const Color.fromARGB(255, 94, 95, 97);
 
   final List transactions;
   Function deleteTx;
@@ -37,8 +37,8 @@ class TransactionList extends StatelessWidget {
                       color: peakcolor,
                       child: Row(children: <Widget>[
                         Container(
-                          padding: EdgeInsets.all(10),
-                          margin: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.all(10),
+                          margin: const EdgeInsets.symmetric(
                               horizontal: 50, vertical: 10),
                           decoration: BoxDecoration(
                               border:
@@ -53,7 +53,7 @@ class TransactionList extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.symmetric(
+                          margin: const EdgeInsets.symmetric(
                               horizontal: 10, vertical: 10),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

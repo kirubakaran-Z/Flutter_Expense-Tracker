@@ -15,11 +15,7 @@ class UserTransactions extends StatefulWidget {
 class _UserTransactionsState extends State<UserTransactions> {
   @override
   Widget build(BuildContext context) {
-    var peakcolor = Color.fromARGB(255, 61, 166, 170);
-    var darkcolor = Color.fromARGB(255, 48, 47, 46);
-    var lightdarkcolor = Color.fromARGB(255, 94, 95, 97);
     return TransactionList(
-                transactions: widget.userTransactions,
-                deleteTx: widget.deleteTx);
+        transactions: widget.userTransactions, deleteTx: widget.deleteTx);
   }
 }

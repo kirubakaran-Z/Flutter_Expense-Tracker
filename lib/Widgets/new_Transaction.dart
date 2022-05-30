@@ -60,28 +60,28 @@ class _NewTransactionState extends State<NewTransaction> {
         elevation: 5,
         color: lightdarkcolor,
         child: Container(
-          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               TextField(
-                  style: TextStyle(color: peakcolor, fontSize: 18),
+                  style: const TextStyle(color: peakcolor, fontSize: 18),
                   controller: _titleController,
                   onSubmitted: (_) => _submitData(),
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Title',
                   )),
               TextField(
-                style: TextStyle(color: peakcolor, fontSize: 18),
+                style: const TextStyle(color: peakcolor, fontSize: 18),
                 controller: _amountController,
                 onSubmitted: (_) => _submitData(),
                 keyboardType: TextInputType.number,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Amount',
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: Row(children: <Widget>[
                   Expanded(
                     child: Text(_selectedDate == null
@@ -89,14 +89,15 @@ class _NewTransactionState extends State<NewTransaction> {
                         : 'Picked Date: ${DateFormat.yMd().format(_selectedDate)}'),
                   ),
                   TextButton(
-                      onPressed: _presentDatePicker, child: Text('Choose Date'))
+                      onPressed: _presentDatePicker,
+                      child: const Text('Choose Date'))
                 ]),
               ),
               Container(
-                  margin: EdgeInsets.all(30),
+                  margin: const EdgeInsets.all(30),
                   child: ElevatedButton(
                     onPressed: _submitData,
-                    child: Text(
+                    child: const Text(
                       'Add Transaction',
                       style: TextStyle(color: darkcolor),
                     ),

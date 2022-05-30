@@ -30,17 +30,17 @@ class Charts extends StatelessWidget {
     });
   }
 
-  var peakcolor = Color.fromARGB(255, 61, 166, 170);
-  var lightdarkcolor = Color.fromARGB(255, 138, 140, 143);
+  var peakcolor = const Color.fromARGB(255, 61, 166, 170);
+  var lightdarkcolor = const Color.fromARGB(255, 138, 140, 143);
 
   @override
   Widget build(BuildContext context) {
     return Card(
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
         elevation: 6,
         color: lightdarkcolor,
         child: Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: groupedTransitionValues.map((e) {

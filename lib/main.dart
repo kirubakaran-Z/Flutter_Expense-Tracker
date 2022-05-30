@@ -52,15 +52,15 @@ class _MyHomePageState extends State<MyHomePage> {
       date: DateTime.now(),
     ),
   ];
-  var peakcolor = Color.fromARGB(255, 61, 166, 170);
-  var darkcolor = Color.fromARGB(255, 48, 47, 46);
-  var lightdarkcolor = Color.fromARGB(255, 94, 95, 97);
+  var peakcolor = const Color.fromARGB(255, 61, 166, 170);
+  var darkcolor = const Color.fromARGB(255, 48, 47, 46);
+  var lightdarkcolor = const Color.fromARGB(255, 94, 95, 97);
 
   List<Transaction> get _recentTransactions {
     return _userTransactions.where((tx) {
       return tx.date.isAfter(
         DateTime.now().subtract(
-          Duration(days: 7),
+          const Duration(days: 7),
         ),
       );
     }).toList();
@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (_) {
           return Container(
               width: double.infinity,
-              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
               color: lightdarkcolor,
               child: NewTransaction(_addNewTransaction));
         });
@@ -100,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final appBar = AppBar(
-      title: Text('Flutter App'),
+      title: const Text('Expense Tracker'),
       actions: [
         IconButton(
           icon: Icon(

@@ -11,9 +11,9 @@ class ChatBar extends StatelessWidget {
       required this.percentofTotal});
 
   @override
-  var peakcolor = Color.fromARGB(255, 61, 166, 170);
-  var lightdarkcolor = Color.fromARGB(255, 94, 95, 97);
-  var darkcolor = Color.fromARGB(255, 48, 47, 46);
+  var peakcolor = const Color.fromARGB(255, 61, 166, 170);
+  var lightdarkcolor = const Color.fromARGB(255, 94, 95, 97);
+  var darkcolor = const Color.fromARGB(255, 48, 47, 46);
 
   Widget build(BuildContext context) {
     return Column(
@@ -47,7 +47,7 @@ class ChatBar extends StatelessWidget {
             ),
           ]),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Text(label),
